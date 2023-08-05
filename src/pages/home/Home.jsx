@@ -8,14 +8,14 @@ import ShopByPrice from './ShopByPrice'
 import ShopByType from './ShopByType'
 import ShopByYear from './ShopByYear'
 import TrendingNow from './TrendingNow'
-// import carImg from '../../assets/images/sport-utilities.svg'
+
 
 
 
 const Home = () => {
   return (
     <div>
-       <Hero/>
+        <Hero/>
         <ShopByType/>
         <ShopByBrand/>
         <ShopByPrice/>

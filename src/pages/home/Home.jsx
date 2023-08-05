@@ -10,11 +10,9 @@ import ShopByYear from './ShopByYear'
 import TrendingNow from './TrendingNow'
 
 
-
-
 const Home = () => {
   return (
-    <div>
+    <>
         <Hero/>
         <ShopByType/>
         <ShopByBrand/>
@@ -24,7 +22,7 @@ const Home = () => {
         <TrendingNow/>
         <ShopByYear/>
         <AssistanceMessage/>
-    </div>
+    </>
   )
 }
 

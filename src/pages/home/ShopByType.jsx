@@ -15,12 +15,12 @@ const ShopByType = () => {
            تسوق حسب النوع
         </h1>
         <Testimonial
-              testimonials={motorTypes} 
-              cardComponent={MotorTypeCard} 
-              testimonialID={'type-carousel'} 
-              useShadow={true}
-              buttonPadding={'py-4'}
-              testimonialPadding={'px-4'}/>
+          testimonials={motorTypes} 
+          cardComponent={MotorTypeCard} 
+          testimonialID={'type-carousel'} 
+          useShadow={true}
+          buttonPadding={'py-4'}
+          testimonialPadding={'px-4'}/>
       </div>
     </Container>
   )

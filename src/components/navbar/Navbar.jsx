@@ -26,47 +26,42 @@ const navbar_items = [
 
 const Navbar = () => {
   return (
-    <div className='z-10'>
     <Container>
-      <div className='flex justify-between items-center py-3 space-x-2  text-white'>
-        
-        <div className='flex items-center gap-4'>
-          <p className=' text-[2rem] font-bold'>متجر سيارات</p>
-          <div className='flex gap-4'>
-            {navbar_items.map((item, index) => (
-              <a href={item.path} key={index} className='flex items-center gap-2'>
-                <p>{item.label}</p>
-                {
-                  index === navbar_items.length -1 && 
-                  <BiSolidDownArrow className=' text-[0.6rem]'/>
-                }
-              </a>
-            ))}
+      <div className='h-[18vh] flex flex-col justify-between'>
+
+        <div className='flex justify-between items-center py-3 space-x-2 text-white'>
+          
+          <div className='flex items-center gap-4'>
+            <p className=' text-[2rem] font-bold'>متجر سيارات</p>
+            <div className='flex gap-4'>
+              {navbar_items.map((item, index) => (
+                <a href={item.path} key={index} className='flex items-center gap-2'>
+                  <p>{item.label}</p>
+                  {
+                    index === navbar_items.length -1 && 
+                    <BiSolidDownArrow className=' text-[0.6rem]'/>
+                  }
+                </a>
+              ))}
+            </div>
           </div>
+
+
+          <div className='flex gap-4 text-[1.4rem]'>
+                <HiHeart className=''/>
+                <HiUser/> 
+          </div>
+
         </div>
 
-
-        <div className='flex gap-4 text-[1.4rem]'>
-              <HiHeart className=''/>
-              <HiUser/> 
+        <div className='flex items-center p-2 bg-white rounded-lg text-[1.4rem]'>
+          <input type="text" className='bg-transparent w-full border-0 hover:outline-none outline-none'/>
+          <AiOutlineSearch/>
         </div>
 
       </div>
-
-
-
-      <div className='flex items-center p-2 bg-white rounded-lg text-[1.4rem]'>
-        <input type="text" className='bg-transparent w-full border-0 hover:outline-none outline-none'/>
-        <AiOutlineSearch/>
-      </div>
-
-
-
-
-
 
     </Container>
-    </div>
   )
 }
 

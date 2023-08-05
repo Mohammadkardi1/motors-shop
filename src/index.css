@@ -1,13 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&display=swap');
+
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  /* background-color: red; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+button.btn-yellow {
+  @apply text-[1rem] lg:text-[1.3rem] font-medium rounded-sm bg-brandYellow text-brandBlue hover:opacity-80
+}
+
+
+.hero {
+  background-image: url('./assets/images/shop-hero-xl.webp');
+  /* position: relative; */
+  /* top: 0; */
+  /* width: 100%; */
+  /* max-width: inherit; */
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin-top: -200px; */
+  /* padding: 0; */
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.custom-select {
+  /* background-image: url('https://react-icons.github.io/react-icons/search?q=down');
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

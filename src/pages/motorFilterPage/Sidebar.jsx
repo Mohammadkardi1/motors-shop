@@ -15,8 +15,6 @@ const Sidebar = () => {
     <div className='  sticky top-0  w-[320px] h-[100vh] border-e border-gray-300'>
 
 
-
-
       <div className='relative z-10 text-gray-600 shadow-md '>
         <div className='px-4 py-4 flex items-center gap-2 text-lg border-b border-gray-300 '>
           <BsFilter className='text-lg'/>
@@ -49,26 +47,27 @@ const Sidebar = () => {
               <p>{item.label}</p>
               <MdArrowBackIos/>
             </div>
-          ))
-          }
+          ))}
         </div>
 
 
 
-        { 
+        
+        
         <div className={`sidebar-filter absolute top-0 w-full h-full bg-white overflow-y-auto
          ${isOpen ? 'translate-x-0 ' : ' translate-x-full '} transition duration-1000`}>
+          
           <div className='flex items-center gap-1 px-6 py-3 border-b border-gray-300 hover:text-lighBlue hover:bg-bgLightBlue cursor-pointer'
             onClick={() => setIsOpen(!isOpen)}>
             <MdKeyboardArrowRight/>
             <p>العودة إلى جميع الفلاتر</p>
           </div>
+
+          {
+
+          }
         </div>
-        }
-
-
-
-
+        
 
       </div>
     </div>

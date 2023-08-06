@@ -4,7 +4,7 @@ import {HiHeart, HiUser} from 'react-icons/hi'
 import {BiSolidDownArrow} from 'react-icons/bi'
 import {AiOutlineSearch} from 'react-icons/ai'
 import { useLocation } from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
 
 const navbar_items = [
   {
@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className='flex justify-between items-center py-3 space-x-2 '>
           
           <div className='flex items-center gap-4'>
-            <p className=' text-[2rem] font-bold'>متجر سيارات</p>
+            <Link to='/cars' className=' text-[2rem] font-bold'>متجر سيارات</Link>
             <div className='flex gap-4'>
               {navbar_items.map((item, index) => (
                 <a href={item.path} key={index} className='flex items-center gap-2'>

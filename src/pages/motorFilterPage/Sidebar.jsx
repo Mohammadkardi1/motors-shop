@@ -10,7 +10,6 @@ const Sidebar = () => {
     <div className='  sticky top-0  w-[320px] h-[100vh] border-e border-gray-300'>
 
 
-    {/* <div className=' sticky top-0 w-[320px]'> */}
 
 
       <div className='text-gray-600 shadow-md '>
@@ -45,7 +44,7 @@ const Sidebar = () => {
       </div>
 
 
-    {/* </div> */}
+
 
 
 

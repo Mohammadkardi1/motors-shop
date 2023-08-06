@@ -8,7 +8,8 @@ module.exports = {
       colors: {
         brandYellow: '#FFD900',
         brandBlue: '#053361',
-        lighBlue: '#005ab8'
+        lighBlue: '#005ab8',
+        bgLightBlue: '#f0f7fc'
       }
     },
   },

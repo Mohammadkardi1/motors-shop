@@ -49,7 +49,7 @@ button.btn-gray {
 .sidebar-filter {
   /* scrollbar-width: thin; */
   /* scrollbar-color: #000000 #ffffff; */
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .sidebar-filter::-webkit-scrollbar {

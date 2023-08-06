@@ -707,3 +707,42 @@ export const filterItems = [
     
 ]
 
+
+export const NearestDistanceFilterItems = [
+    {
+        type: 'bestMatch',
+        label: 'أفضل تطابق'
+    },
+    {
+        type: 'nearestDistance',
+        label: 'أقرب مسافة'
+    },
+    {
+        type: 'lowestPrice',
+        label: 'أقل سعر'
+    },
+    {
+        type: 'highestPrice',
+        label: 'أعلى سعر'
+    },
+    {
+        type: 'lowestMileage',
+        label: 'أقل مسافة مقطوعة'
+    },
+    {
+        type: 'highestMileage',
+        label: 'أعلى مسافة مقطوعة'
+    },
+    {
+        type: 'newestYear',
+        label: 'أحدث سنة'
+    },
+    {
+        type: 'oldestYear',
+        label: 'أقدم سنة'
+    },
+    {
+        type: 'newMatch',
+        label: 'تطابق جديد'
+    },
+]

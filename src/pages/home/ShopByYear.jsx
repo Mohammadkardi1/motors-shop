@@ -2,7 +2,7 @@ import React from 'react'
 import Container from '../../components/Container'
 import { yearCategories } from '../../assets/data/DataItem'
 import Testimonial from '../../components/Testimonial'
-import yearCategoriesCard from './cards/yearCategoriesCard'
+import yearCategoriesCard from '../../components/cards/yearCategoriesCard'
 
 
 

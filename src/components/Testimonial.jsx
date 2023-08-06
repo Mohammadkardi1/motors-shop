@@ -2,7 +2,7 @@ import React from 'react'
 import {MdArrowForwardIos, MdArrowBackIos} from 'react-icons/md'
 
 
-
+ 
 const Testimonial = ({ testimonials, 
             cardComponent, 
             testimonialID, 
@@ -42,10 +42,10 @@ const Testimonial = ({ testimonials,
               <MdArrowBackIos/>
             </button>
         </div>
-        <div id={testimonialID} className={`${testimonialPadding} flex gap-4 items-center justify-start scroll-smooth overflow-x-auto `}>
-            {testimonials.map((testimonial, index) => (
+        <div id={testimonialID} className={`testimonial ${testimonialPadding} flex gap-4 items-center justify-start scroll-smooth overflow-x-auto `}>
+            {testimonials.map((item, index) => (
               <>
-                {cardComponent(testimonial, index, hoverdCard, setHoverdCard)}
+                {cardComponent(item, index, hoverdCard, setHoverdCard)}
               </>
             ))}
         </div>

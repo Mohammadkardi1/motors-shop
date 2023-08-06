@@ -3,6 +3,8 @@ import Container from '../Container'
 import {HiHeart, HiUser} from 'react-icons/hi'
 import {BiSolidDownArrow} from 'react-icons/bi'
 import {AiOutlineSearch} from 'react-icons/ai'
+import { useLocation } from 'react-router-dom'
+
 
 const navbar_items = [
   {
@@ -25,11 +27,20 @@ const navbar_items = [
 
 
 const Navbar = () => {
-  return (
-    <Container>
-      <div className='h-[18vh] flex flex-col justify-between'>
 
-        <div className='flex justify-between items-center py-3 space-x-2 text-white'>
+  const location = useLocation()
+
+
+  console.log(location.pathname)
+
+
+  return (
+    <div className={`${location.pathname.replace(/\/$/, '') === '/cars' ? '' : 'pb-4 border border-b shadow-md '}`}>
+    <Container>
+      <div className={`h-[18vh] flex flex-col justify-between  
+        ${location.pathname.replace(/\/$/, '') === '/cars' ? 'text-white' : 'text-brandBlue '}`}>
+
+        <div className='flex justify-between items-center py-3 space-x-2 '>
           
           <div className='flex items-center gap-4'>
             <p className=' text-[2rem] font-bold'>متجر سيارات</p>
@@ -54,14 +65,19 @@ const Navbar = () => {
 
         </div>
 
-        <div className='flex items-center p-2 bg-white rounded-lg text-[1.4rem]'>
-          <input type="text" className='bg-transparent w-full border-0 hover:outline-none outline-none'/>
-          <AiOutlineSearch/>
+        <div className={`flex items-center px-2 py-3  rounded-lg text-[1.1rem]
+            ${location.pathname === '/cars' ? "bg-white text-brandBlue" : "text-gray-600 bg-gray-100 border border-gray-200 shadow-sm" }`}>
+          <input 
+            type="text" 
+            placeholder='ابحث حسب الماركة، الطراز أو الكلمة المفتاحية' 
+            className='bg-transparent w-full border-0 hover:outline-none outline-none'/>
+          <AiOutlineSearch className='text-[1.4rem]'/>
         </div>
 
       </div>
 
     </Container>
+    </div>
   )
 }
 

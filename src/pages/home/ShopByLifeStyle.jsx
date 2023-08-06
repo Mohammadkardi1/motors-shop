@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../../components/Container'
 import {motorLifestyle} from '../../assets/data/DataItem'
-import MotorLifestyleCard from './cards/MotorLifestyleCard'
+import MotorLifestyleCard from '../../components/cards/MotorLifestyleCard'
 import Testimonial from '../../components/Testimonial'
 
 

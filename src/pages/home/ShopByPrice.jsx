@@ -4,7 +4,7 @@ import { priceCategories } from '../../assets/data/DataItem'
 import {AiOutlineDown} from 'react-icons/ai'
 import { priceRangeOptions } from '../../assets/data/DataItem'
 import Testimonial from '../../components/Testimonial'
-import PriceCategoriesCard from './cards/PriceCategoriesCard'
+import PriceCategoriesCard from '../../components/cards/PriceCategoriesCard'
 
 const ShopByPrice = () => {
 
@@ -82,9 +82,10 @@ const ShopByPrice = () => {
                     </div>
                     <div className='col-span-2 flex justify-center'>
                         <button 
-                            className='btn-yellow py-1 disabled:bg-gray-400 px-6
-                                disabled:text-neutral-900 disabled:opacity-80 '
-                            disabled={priceRange.minPrice === null || priceRange.maxPrice === null  } >
+                        // 
+                            className={`py-1 px-6 
+                            ${priceRange.minPrice === null || priceRange.maxPrice === null ? 'btn-gray' : 'btn-yellow'}`}
+                            disabled={priceRange.minPrice === null || priceRange.maxPrice === null} >
                             بحث
                         </button>
                     </div>

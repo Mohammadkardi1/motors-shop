@@ -2,7 +2,7 @@ import React from 'react'
 import {motorTypes} from '../../assets/data/DataItem'
 import Container from '../../components/Container';
 import Testimonial from '../../components/Testimonial';
-import MotorTypeCard from './cards/MotorTypeCard';
+import MotorTypeCard from '../../components/cards/MotorTypeCard';
 
 
 

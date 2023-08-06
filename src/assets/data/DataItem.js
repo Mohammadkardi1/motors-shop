@@ -493,6 +493,55 @@ export const localCars = [
         alt: 'Chevrolet2020',
         traveledDistance: '310',
         price: '260.000.000'
+    }, 
+    {
+        label: 'أودي 2014',
+        img: Audi2014,
+        alt: 'Audi2014',
+        traveledDistance: '504',
+        price: '61.000.000'
+    }, 
+    {
+        label: 'دودج 2014',
+        img: Dodge2014,
+        alt: 'Dodge2014',
+        traveledDistance: '74',
+        price: '77.000.000'
+    }, 
+    {
+        label: 'هيونداي 2016',
+        img: Hyundai2016,
+        alt: 'Hyundai2016',
+        traveledDistance: '91',
+        price: '50.000.000'
+    }, 
+    {
+        label: 'هيونداي 2017',
+        img: Hyundai2017,
+        alt: 'Hyundai2017',
+        traveledDistance: '63',
+        price: '70.000.000'
+    }, 
+    {
+        label: 'هوندا 2019',
+        img: Honda2019,
+        alt: 'Honda2019',
+        traveledDistance: '585',
+        price: '80.000.000'
+    }, 
+    {
+        label: 'دودج 2019',
+        img: Dodge2019,
+        alt: 'Dodge2019',
+        traveledDistance: '19',
+        price: '120.000.000'
+    }, 
+    {
+        label: 'شفروليه 2020',
+        img: Chevrolet2020,
+        alt: 'Chevrolet2020',
+        traveledDistance: '310',
+        price: '260.000.000'
     }
 ]
 
@@ -588,3 +637,57 @@ export const yearCategories = [
         label: "2023"
     },
 ]
+
+
+export const filterItems = [
+    {
+        label: 'الترتيب حسب أقرب مسافة'
+    },
+    {
+        label: 'المسافة & الشحن'
+    },
+    {
+        label: 'الصنع'
+    },
+    {
+        label: 'نوع الهيكل'
+    },
+    {
+        label: 'نوع الوقود'
+    },
+    {
+        label: 'السنة'
+    },
+    {
+        label: 'السعر '
+    },
+    {
+        label: 'عدد الأميال'
+    },
+    {
+        label: 'الميزات'
+    },
+    {
+        label: 'نظام الدفع'
+    },
+    {
+        label: 'اللون الخارجي'
+    },
+    {
+        label: 'اللون الداخلي'
+    },
+    {
+        label: 'ناقل الحركة'
+    },
+    {
+        label: 'سيلندر '
+    },
+    {
+        label: 'استهلاك الوقود في الطرق السريعة'
+    },
+    {
+        label: 'بحث متقدم'
+    },
+    
+]
+

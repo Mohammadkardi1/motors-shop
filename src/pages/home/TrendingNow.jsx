@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Container from '../../components/Container'
 import {trendingNow} from '../../assets/data/DataItem'
 import Testimonial from '../../components/Testimonial'
-import trendingNowCard from './cards/TrendingNowCard'
+import trendingNowCard from '../../components/cards/TrendingNowCard'
 
 
 const TrendingNow = () => {

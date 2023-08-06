@@ -4,7 +4,7 @@ import {motorBrands} from '../../assets/data/DataItem'
 import {AiOutlineDown} from 'react-icons/ai'
 import { useState } from 'react'
 import Testimonial from '../../components/Testimonial'
-import MotorBrandCard from './cards/MotorBrandCard'
+import MotorBrandCard from '../../components/cards/MotorBrandCard'
 
 
 const ShopByBrand = () => {
@@ -51,11 +51,12 @@ const ShopByBrand = () => {
                                 <AiOutlineDown/>
                             </div>
                         </div>
-                        <button 
-                            className='btn-yellow w-full py-2 disabled:bg-gray-400 disabled:text-neutral-900 disabled:opacity-80 ' 
+                        <button
+                            className={`w-full py-2 ${!motorBrand ? 'btn-gray' : 'btn-yellow'}`}
                             disabled={!motorBrand }>
                             تسوق هذه الماركة
                         </button>
+
                     </div>
                 </div>
             </div>

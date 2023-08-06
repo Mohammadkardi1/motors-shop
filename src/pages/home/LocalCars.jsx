@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../../components/Container'
 import {localCars} from '../../assets/data/DataItem'
-import LocalCarsCard from './cards/LocalCarsCard'
+import LocalCarsCard from '../../components/cards/LocalCarsCard'
 import Testimonial from '../../components/Testimonial'
 
 

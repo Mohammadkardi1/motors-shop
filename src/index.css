@@ -16,6 +16,10 @@ button.btn-yellow {
   @apply text-[1rem] lg:text-[1.3rem] font-medium rounded-sm bg-brandYellow text-brandBlue hover:opacity-80
 }
 
+button.btn-gray {
+  @apply text-[1rem] lg:text-[1.3rem] font-medium rounded-sm bg-gray-400 text-neutral-900 opacity-80
+}
+
 
 .hero-bg {
   background-image: url('./assets/images/shop-hero-xl.webp');
@@ -31,10 +35,38 @@ button.btn-yellow {
 }
 
 
-::-webkit-scrollbar {
+.testimonial::-webkit-scrollbar {
   display: none;
 }
 
+.sidebar-grid::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+.sidebar-filter {
+  /* scrollbar-width: thin; */
+  /* scrollbar-color: #000000 #ffffff; */
+  cursor: pointer;
+}
+
+.sidebar-filter::-webkit-scrollbar {
+  width: 5px;
+  /* height: 8px; */
+  border-radius: 4px;
+}
+
+.sidebar-filter::-webkit-scrollbar-thumb {
+  background-color: #053361;
+  border-radius: 4px;
+}
+
+.sidebar-filter::-webkit-scrollbar-track {
+  background-color: #F5F6F7;
+  border-radius: 4px;
+}
 
 
 .custom-select {

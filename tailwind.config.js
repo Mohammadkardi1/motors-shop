@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       colors: {
         brandYellow: '#FFD900',
-        brandBlue: '#053361'
+        brandBlue: '#053361',
+        lighBlue: '#005ab8'
       }
     },
   },

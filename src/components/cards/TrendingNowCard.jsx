@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import {BiLeftArrowAlt} from 'react-icons/bi'
-
+import { Link } from 'react-router-dom'
 
 
 const TrendingNowCard = (item, index, hoverdCard, setHoverdCard) => {
 
   return (
-    <div key={index}>
+    <Link to='/cars/car' key={index}>
         <div className='relative h-[340px] w-[280px] shadow-lg border rounded-md overflow-hidden cursor-pointer'
                 onMouseEnter={() => setHoverdCard(index)}
                 onMouseLeave={() => setHoverdCard(null)}>
@@ -29,7 +29,7 @@ const TrendingNowCard = (item, index, hoverdCard, setHoverdCard) => {
                     </div>
             </div>
         </div>
-    </div>
+    </Link>
   )
 }
 

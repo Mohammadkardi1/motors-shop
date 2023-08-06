@@ -1,9 +1,11 @@
 import React from 'react'
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { Link } from 'react-router-dom';
+
 
 const LocalCarsCard = (item, index) => {
   return (
-    <div key={index} >
+    <Link to='/cars/car' key={index} >
         <div className='relative w-[280px] shadow-lg border rounded-md overflow-hidden'>
             <img 
                 src={item.img} 
@@ -28,7 +30,7 @@ const LocalCarsCard = (item, index) => {
                 </div>
             </div>
         </div>
-    </div>
+    </Link>
   )
 }
 

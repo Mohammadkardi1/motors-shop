@@ -3,12 +3,21 @@ import { useState } from 'react'
 import {BsFilter} from 'react-icons/bs'
 import {MdArrowBackIos, MdKeyboardArrowRight} from 'react-icons/md'
 import {filterItems} from '../../assets/data/DataItem'
+import SidebarPanelMenu from './SidebarPanelMenu.jsx'
 
 
 
 const Sidebar = () => {
 
   const [isOpen, setIsOpen] = useState(false)
+  const [filterType, setFilterType] = useState(null)
+
+
+  const filterItemHandler = (type) => {
+    setIsOpen(!isOpen)
+    setFilterType(type)
+    console.log('type', type)
+  }
 
 
   return (
@@ -41,7 +50,7 @@ const Sidebar = () => {
           {filterItems.map((item, index) => (
             <div 
               key={index} 
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => filterItemHandler(item.type)}
               className={`flex justify-between px-6 py-3 hover:text-lighBlue hover:bg-bgLightBlue  cursor-pointer
                   ${index !== filterItems.length - 1 ? 'border-b border-gray-300' : 'mb-12' }`}>
               <p>{item.label}</p>
@@ -55,7 +64,7 @@ const Sidebar = () => {
         
         
         <div className={`sidebar-filter absolute top-0 w-full h-full bg-white overflow-y-auto
-         ${isOpen ? 'translate-x-0 ' : ' translate-x-full '} transition duration-1000`}>
+         ${isOpen ? 'translate-x-0 ' : ' translate-x-full '} transition duration-700`}>
           
           <div className='flex items-center gap-1 px-6 py-3 border-b border-gray-300 hover:text-lighBlue hover:bg-bgLightBlue cursor-pointer'
             onClick={() => setIsOpen(!isOpen)}>
@@ -63,9 +72,9 @@ const Sidebar = () => {
             <p>العودة إلى جميع الفلاتر</p>
           </div>
 
-          {
 
-          }
+            <SidebarPanelMenu filterType={filterType}/>
+
         </div>
         
 

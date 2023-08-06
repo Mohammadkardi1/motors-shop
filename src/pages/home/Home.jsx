@@ -2,28 +2,23 @@ import React, { useState } from 'react'
 import MotorTypeCard from '../../components/cards/MotorTypeCard'
 import Container from '../../components/Container'
 import Testimonial from '../../components/Testimonial'
-// import AssistanceMessage from './AssistanceMessage'
 import Hero from './Hero'
-// import LocalCars from './LocalCars'
-// import ShopByBrand from './ShopByBrand'
-// import ShopByLifeStyle from './ShopByLifeStyle'
-// import ShopByPrice from './ShopByPrice'
-// import ShopByType from './ShopByType'
-// import ShopByYear from './ShopByYear'
-// import TrendingNow from './TrendingNow'
 import assistanceImg from '../../assets/images/AssistanceMessage.jpg'
-
-
-
 import {AiOutlineDown} from 'react-icons/ai'
-
-import { localCars, motorBrands, motorLifestyle, motorTypes, priceCategories, priceRangeOptions, trendingNow, yearCategories } from '../../assets/data/DataItem'
 import MotorBrandCard from '../../components/cards/MotorBrandCard'
 import priceCategoriesCard from '../../components/cards/PriceCategoriesCard'
 import MotorLifestyleCard from '../../components/cards/MotorLifestyleCard'
 import LocalCarsCard from '../../components/cards/LocalCarsCard'
 import TrendingNowCard from '../../components/cards/TrendingNowCard'
 import yearCategoriesCard from '../../components/cards/yearCategoriesCard'
+import { localCars, 
+        motorBrands, 
+        motorLifestyle, 
+        motorTypes, 
+        priceCategories, 
+        priceRangeOptions, 
+        trendingNow, 
+        yearCategories } from '../../assets/data/DataItem'
 
  
 const Home = () => {
@@ -40,12 +35,10 @@ const Home = () => {
   const [priceRange, setPriceRange] = useState({minPrice: null, maxPrice: null});
   const [minPriceIndex, setMinPriceIndex] = useState(0);
   const [maxPriceIndex, setMaxPriceIndex] = useState(priceRangeOptions.length -1);
-
   const handleMinPriceChange = (event) => {
       setPriceRange(prevRange => ({ ...prevRange, minPrice: event.target.value }))
       setMinPriceIndex(priceRangeOptions.findIndex(option => option.label === event.target.value))
   }
-
   const handleMaxPriceChange = (event) => {
       setPriceRange(prevRange => ({...prevRange, maxPrice: event.target.value}))
       setMaxPriceIndex(priceRangeOptions.findIndex(option => option.label === event.target.value))

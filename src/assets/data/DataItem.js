@@ -641,51 +641,67 @@ export const yearCategories = [
 
 export const filterItems = [
     {
+        type: 'NearestDistance',
         label: 'الترتيب حسب أقرب مسافة'
     },
     {
+        type: 'DistanceShipping',
         label: 'المسافة & الشحن'
     },
     {
+        type: 'Make',
         label: 'الصنع'
     },
     {
+        type: 'BodyType',
         label: 'نوع الهيكل'
     },
     {
+        type: 'FuelType',
         label: 'نوع الوقود'
     },
     {
+        type: 'Year',
         label: 'السنة'
     },
     {
+        type: 'Price',
         label: 'السعر '
     },
     {
+        type: 'Mileage',
         label: 'عدد الأميال'
     },
     {
+        type: 'Features',
         label: 'الميزات'
     },
     {
+        type: 'Drivetrian',
         label: 'نظام الدفع'
     },
     {
+        type: 'ExteriorColor',
         label: 'اللون الخارجي'
     },
     {
+        type: 'InteriorColor',
         label: 'اللون الداخلي'
     },
     {
+        type: 'Transmission',
         label: 'ناقل الحركة'
     },
     {
+        type: 'Cylinders',
         label: 'سيلندر '
     },
     {
+        type: 'MPGHighway',
         label: 'استهلاك الوقود في الطرق السريعة'
     },
     {
+        type: "AdvancedSearch",
         label: 'بحث متقدم'
     },
     

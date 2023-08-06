@@ -31,9 +31,6 @@ const Navbar = () => {
   const location = useLocation()
 
 
-  console.log(location.pathname)
-
-
   return (
     <div className={`${location.pathname.replace(/\/$/, '') === '/cars' ? '' : 'pb-4 border border-b shadow-md '}`}>
     <Container>

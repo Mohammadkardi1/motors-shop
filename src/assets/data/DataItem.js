@@ -793,3 +793,19 @@ export const MaxShippingFeeFilterItems = [
         label: 'مجاناً للمنزل أو المتجر'
     }
 ]
+
+
+export const FuelTypeFilterItems = [
+    {
+        label: 'بانزين'
+    },
+    {
+        label: 'مازوت'
+    },
+    {
+        label: 'غاز'
+    },
+    {
+        label: 'كهرباء'
+    },
+]

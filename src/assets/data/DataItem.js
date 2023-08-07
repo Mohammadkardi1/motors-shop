@@ -138,211 +138,211 @@ export const motorBrands = [
     {
         label: 'أكورا',
         img: acura,
-        alt: 'acura',
+        type: 'acura',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'أودي',
         img: audi,
-        alt: 'audi',
+        type: 'audi',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'بي ام دبليو',
         img: bmw,
-        alt: 'bmw',
+        type: 'bmw',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'بويك',
         img: buick,
-        alt: 'buick',
+        type: 'buick',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'كاديلاك',
         img: cadillac,
-        alt: 'cadillac',
+        type: 'cadillac',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'شيفروليه',
         img: chevy,
-        alt: 'chevy',
+        type: 'chevy',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'كرايسلر',
         img: chrysler,
-        alt: 'chrysler',
+        type: 'chrysler',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'دودج',
         img: dodge,
-        alt: 'dodge',
+        type: 'dodge',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'فيات',
         img: fiat,
-        alt: 'fiat',
+        type: 'fiat',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'فورد',
         img: ford,
-        alt: 'ford',
+        type: 'ford',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'جينيسيس',
         img: genesis,
-        alt: 'genesis',
+        type: 'genesis',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'جي أم سي',
         img: gmc,
-        alt: 'gmc',
+        type: 'gmc',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'هوندا',
         img: honda,
-        alt: 'honda',
+        type: 'honda',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'هيونداي',
         img: hyundai,
-        alt: 'hyundai',
+        type: 'hyundai',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'إنفينيتي',
         img: infiniti,
-        alt: 'infiniti',
+        type: 'infiniti',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'جاكوار',
         img: jaguar,
-        alt: 'jaguar',
+        type: 'jaguar',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'جيب',
         img: jeep,
-        alt: 'jeep',
+        type: 'jeep',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'كيا',
         img: kia,
-        alt: 'kia',
+        type: 'kia',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'لاندروفر',
         img: landrover,
-        alt: 'landrover',
+        type: 'landrover',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'لكزس',
         img: lexus,
-        alt: 'lexus',
+        type: 'lexus',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'لينكولن',
         img: lincoln,
-        alt: 'lincoln',
+        type: 'lincoln',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'مازدا',
         img: mazda,
-        alt: 'mazda',
+        type: 'mazda',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'مرسيدس',
         img: mercedes,
-        alt: 'mercedes',
+        type: 'mercedes',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'ميني',
         img: mini,
-        alt: 'mini',
+        type: 'mini',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'ميتسوبيشي',
         img: mitsubishi,
-        alt: 'mitsubishi',
+        type: 'mitsubishi',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'نيسان',
         img: nissan,
-        alt: 'nissan',
+        type: 'nissan',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'بورش',
         img: porsche,
-        alt: 'porsche',
+        type: 'porsche',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'رام',
         img: ram,
-        alt: 'ram',
+        type: 'ram',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'سايون',
         img: scion,
-        alt: 'scion',
+        type: 'scion',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'سمارت',
         img: smart,
-        alt: 'smart',
+        type: 'smart',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'سوبارو',
         img: subaru,
-        alt: 'subaru',
+        type: 'subaru',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'تسلا',
         img: tesla,
-        alt: 'tesla',
+        type: 'tesla',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'تويوتا',
         img: toyota,
-        alt: 'toyota',
+        type: 'toyota',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'فولفو',
         img: volvo,
-        alt: 'volvo',
+        type: 'volvo',
         match: '2547 تطابقاً'
     }, 
     {
         label: 'فولكس واجن',
         img: vw,
-        alt: 'vw',
+        type: 'vw',
         match: '2547 تطابقاً'
     }, 
 ] 
@@ -745,4 +745,51 @@ export const NearestDistanceFilterItems = [
         type: 'newMatch',
         label: 'تطابق جديد'
     },
+]
+
+
+export const ShipByDistanceFilterItems = [
+    {
+        label: 'على مستوى البلاد'
+    },
+    {
+        label: '25 ميل'
+    },
+    {
+        label: '50 ميل'
+    },
+    {
+        label: '75 ميل'
+    },
+    {
+        label: '100 ميل'
+    },
+    {
+        label: '250 ميل'
+    },
+    {
+        label: '500 ميل'
+    },
+
+]
+
+export const MaxShippingFeeFilterItems = [
+    {
+        label: 'أياً كان'
+    },
+    {
+        label: 'مليون أو أقل'
+    },
+    {
+        label: 'مليونين أو أقل'
+    },
+    {
+        label: '5 مليون أو أقل'
+    },
+    {
+        label: '10 مليون أو أقل'
+    },
+    {
+        label: 'مجاناً للمنزل أو المتجر'
+    }
 ]

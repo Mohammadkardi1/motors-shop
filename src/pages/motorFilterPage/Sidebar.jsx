@@ -42,7 +42,7 @@ const Sidebar = () => {
       </div>
 
 
-      <div className=' relative h-[75%]   text-brandBlue font-semibold '>
+      <div className=' relative h-[75%] text-brandBlue font-semibold '>
 
 
 

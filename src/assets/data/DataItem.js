@@ -809,3 +809,73 @@ export const FuelTypeFilterItems = [
         label: 'كهرباء'
     },
 ]
+
+
+export const DrivetrianFilterItems = [
+    {
+        label: 'دفع الرباعي'
+    },
+    {
+        label: 'دفع الأمامي'
+    },
+    {
+        label: 'دفع الخلفي'
+    },
+]
+
+
+export const ExteriorColorFilterItems = [
+    {
+        label: 'أسود'
+    },
+    {
+        label: 'أزرق'
+    },
+    {
+        label: 'رمادي'
+    },
+    {
+        label: 'برتقالي'
+    },
+    {
+        label: 'أحمر'
+    },
+    {
+        label: 'فضي'
+    },
+    {
+        label: 'أبيض'
+    },
+]
+
+
+export const InteriorColorFilterItems = [
+    {
+        label: 'أسود'
+    },
+    {
+        label: 'أزرق'
+    },
+    {
+        label: 'بني'
+    },
+    {
+        label: 'رمادي'
+    },
+    {
+        label: 'بني فاتح'
+    },
+    {
+        label: 'أبيض'
+    },
+]
+
+
+export const TransmissionFilterItems = [
+    {
+        label: 'عادي'
+    },
+    {
+        label: 'اوتوماتيك'
+    },
+]

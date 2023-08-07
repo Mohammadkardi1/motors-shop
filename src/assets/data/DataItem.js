@@ -692,14 +692,14 @@ export const filterItems = [
         type: 'Transmission',
         label: 'ناقل الحركة'
     },
-    {
-        type: 'Cylinders',
-        label: 'سيلندر '
-    },
-    {
-        type: 'MPGHighway',
-        label: 'استهلاك الوقود في الطرق السريعة'
-    },
+    // {
+    //     type: 'Cylinders',
+    //     label: 'سيلندر '
+    // },
+    // {
+    //     type: 'MPGHighway',
+    //     label: 'استهلاك الوقود في الطرق السريعة'
+    // },
     {
         type: "AdvancedSearch",
         label: 'بحث متقدم'
@@ -809,6 +809,7 @@ export const FuelTypeFilterItems = [
         label: 'كهرباء'
     },
 ]
+
 
 
 export const DrivetrianFilterItems = [

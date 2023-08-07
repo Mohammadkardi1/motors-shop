@@ -10,7 +10,8 @@ import {ShipByDistanceFilterItems,
         DrivetrianFilterItems,
         ExteriorColorFilterItems,
         InteriorColorFilterItems,
-        TransmissionFilterItems} from '../../assets/data/DataItem'
+        TransmissionFilterItems,
+        yearCategories} from '../../assets/data/DataItem'
 
 
 
@@ -34,16 +35,19 @@ const SidebarPanelMenu = ({filterType}) => {
   }
 
 
-  console.log('outOfMarket', outOfMarket)
+  // Year 
+  const [minYear, setMinYear] = useState(null)
+  const [maxYear, setMaxYear] = useState(null)
+
+  console.log('minYear', minYear)
+  console.log('maxYear', maxYear)
 
   // console.log(nearestDistance)
 
   return (
     <>
-      
-
       {filterType === 'NearestDistance' && 
-        <div className=' flex flex-col gap-6 p-4'>
+        <div className=' flex flex-col gap-2 p-4'>
           <h1 className=' font-bold'>
             الترتيب حسب أقرب مسافة
           </h1>
@@ -87,8 +91,6 @@ const SidebarPanelMenu = ({filterType}) => {
           }
         </div>
       }
-
-
 
 
       {filterType === 'DistanceShipping' && 
@@ -179,9 +181,6 @@ const SidebarPanelMenu = ({filterType}) => {
       }
 
 
-
-
-
       {filterType === 'Make' && 
         <div className=' flex flex-col gap-2 p-4'>
           <h1 className=' font-bold'>
@@ -255,7 +254,6 @@ const SidebarPanelMenu = ({filterType}) => {
         </div>
       }
 
-
       
       {filterType === 'FuelType' && 
         <div className=' flex flex-col gap-2 p-4'>
@@ -300,10 +298,53 @@ const SidebarPanelMenu = ({filterType}) => {
           <h1 className=' font-bold'>
             السنة 
           </h1>
+          <div className='px-4'>
+            <p className='mb-2'>من</p>
+            <div className={`relative w-full py-2 border border-brandBlue rounded-sm shadow-lg
+                ${minYear !== null ? " outline outline-brandBlue" : ""}`}>
+                <select 
+                    name="ship-byDistance" 
+                    defaultValue='default'
+                    onChange={(e) => setMinYear(e.target.value)}
+                    className='h-full px-2 bg-transparent  z-20 custom-select w-full outline-none ring-transparent '>
+                    {/* <option value="default" disabled>اختر ماركة</option> */}
+                    {yearCategories.map((item, index) => (
+                        <option key={index} value={item.label}>
+                            {item.label}
+                        </option>
+                    ))}
+                </select>
+                <div className='absolute z-10 top-1/2 left-4 transform -translate-x-1/2 -translate-y-1/2 '>
+                    <AiOutlineDown/>
+                </div>
+            </div>
+          </div>
+          <div className='px-4'>
+            <p className='mb-2'>إلى</p>
+            <div className={`relative w-full py-2 border border-brandBlue rounded-sm shadow-lg
+                ${maxYear !== null ? " outline outline-brandBlue" : ""}`}>
+                <select 
+                    name="ship-byDistance" 
+                    defaultValue='default'
+                    onChange={(e) => setMaxYear(e.target.value)}
+                    className='h-full px-2 bg-transparent  z-20 custom-select w-full outline-none ring-transparent '>
+                    {/* <option value="default" disabled>اختر ماركة</option> */}
+                    {yearCategories.map((item, index) => (
+                        <option key={index} value={item.label}>
+                            {item.label}
+                        </option>
+                    ))}
+                </select>
+                <div className='absolute z-10 top-1/2 left-4 transform -translate-x-1/2 -translate-y-1/2 '>
+                    <AiOutlineDown/>
+                </div>
+            </div>
+          </div>
 
 
         </div>
       }
+
 
       {filterType === 'Mileage' && 
         <div className=' flex flex-col gap-2 p-4'>
@@ -336,9 +377,9 @@ const SidebarPanelMenu = ({filterType}) => {
           </h1>
           {DrivetrianFilterItems.map((item, index) => (
             <div key={index} class="inline-flex items-center">
-              <label for={`exterior-color-${index}`} class="relative flex cursor-pointer items-center rounded-full p-3">
+              <label for={`drivetrian-color-${index}`} class="relative flex cursor-pointer items-center rounded-full p-3">
                 <input
-                  id={`exterior-color-${index}`}
+                  id={`drivetrian-color-${index}`}
                   type="checkbox"
                   class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none 
                    border-2 border-neutral-500 transition-all before:absolute before:top-2/4 
@@ -355,7 +396,7 @@ const SidebarPanelMenu = ({filterType}) => {
               </label>
               <label
                     class="mt-px cursor-pointer select-none "
-                    for={`exterior-color-${index}`}
+                    for={`drivetrian-color-${index}`}
                   >
                 <p className='cursor-pointer'>{item.label}</p>
               </label>
@@ -479,25 +520,6 @@ const SidebarPanelMenu = ({filterType}) => {
         </div>
       }
 
-      {filterType === 'Cylinders' && 
-        <div className=' flex flex-col gap-2 p-4'>
-          <h1 className=' font-bold'>
-             سيلندر   
-          </h1>
-
-        </div>
-      }
-
-
-      {filterType === 'MPGHighway' && 
-        <div className=' flex flex-col gap-2 p-4'>
-          <h1 className=' font-bold'>
-            استهلاك الوقود في الطرق السريعة   
-          </h1>
-
-        </div>
-      }
-
 
 
 
@@ -510,8 +532,6 @@ const SidebarPanelMenu = ({filterType}) => {
 
       </div>
       }
-
-
     </>
   )
 }

@@ -16,7 +16,6 @@ const Sidebar = () => {
   const filterItemHandler = (type) => {
     setIsOpen(!isOpen)
     setFilterType(type)
-    console.log('type', type)
   }
 
 

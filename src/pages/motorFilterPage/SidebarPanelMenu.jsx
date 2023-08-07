@@ -45,14 +45,38 @@ const SidebarPanelMenu = ({filterType}) => {
           {NearestDistanceFilterItems.map((item, index) => (
               <div key={index} className='flex gap-2 cursor-pointer'
                 onClick={() => setNearestDistanceFilter(item.type)}>
-
-                <div key={index}
-                  className={`rounded-full w-6 h-6 border cursor-pointer  transition duration-300 
-                  ${item.type ===  nearestDistanceFilter ? " border-8 border-blue-800 ring-4 ring-blue-300  " : "border-black"} `}
-                >
+                <div class="inline-flex items-center">
+                  <label
+                    class="relative flex cursor-pointer items-center rounded-full p-3"
+                    for={`distance-${index}`}
+                    data-ripple-dark="true"
+                  >
+                    <input id={`distance-${index}`} name="type" type="radio"
+                      class="before:content[''] peer relative h-5 w-5 cursor-pointer 
+                      border-2 border-neutral-500 appearance-none rounded-full
+                      text-blue-500 transition-all before:absolute before:top-2/4 
+                      before:left-2/4 before:block before:h-12 before:w-12 
+                      before:-translate-y-2/4 before:-translate-x-2/4 
+                      before:rounded-full before:bg-blue-gray-500 before:opacity-0 
+                      before:transition-opacity checked:border-blue-500 
+                      checked:before:bg-blue-500 hover:before:opacity-10"/>
+                    <div class="pointer-events-none absolute top-2/4 left-2/4 
+                    -translate-y-2/4 -translate-x-2/4 text-blue-500 opacity-0 
+                    transition-opacity peer-checked:opacity-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="currentColor">
+                        <circle data-name="ellipse" cx="8" cy="8" r="8"></circle>
+                      </svg>
+                    </div>
+                  </label>
+                  <label
+                    class="mt-px cursor-pointer select-none "
+                    for={`distance-${index}`}
+                  >
+                    <p>{item.label}</p>
+                  </label>
                 </div>
 
-                <p>{item.label}</p>
+                {/* <p>{item.label}</p> */}
             </div>
             ))
           }
@@ -135,7 +159,12 @@ const SidebarPanelMenu = ({filterType}) => {
                   ></div>
                 </label>
               </div>
-              <p className='ms-4'>خارج السوق</p>
+              <label
+                    class="mt-px cursor-pointer select-none "
+                    for="switch-1"
+                  >
+                <p className='ms-4 cursor-pointer'>خارج السوق</p>
+              </label>
             </div>
             <p className='text-xs font-semibold text-neutral-500 mt-2'>
             قد يشمل ذلك السيارات التي لا يمكن شحنها وهي متوفرة فقط في متجرها الحالي
@@ -155,8 +184,9 @@ const SidebarPanelMenu = ({filterType}) => {
           </h1>
           {motorBrands.map((item, index) => (
             <div key={index} class="inline-flex items-center">
-              <label class="relative flex cursor-pointer items-center rounded-full p-3">
+              <label for={`make-${index}`} class="relative flex cursor-pointer items-center rounded-full p-3">
                 <input
+                  id={`make-${index}`}
                   type="checkbox"
                   class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none 
                    border-2 border-neutral-500 transition-all before:absolute before:top-2/4 
@@ -171,7 +201,12 @@ const SidebarPanelMenu = ({filterType}) => {
                   </svg>
                 </div>
               </label>
-              <p>{item.label}</p>
+              <label
+                    class="mt-px cursor-pointer select-none "
+                    for={`make-${index}`}
+                  >
+                <p className='cursor-pointer'>{item.label}</p>
+              </label>
             </div>
             ))
           }

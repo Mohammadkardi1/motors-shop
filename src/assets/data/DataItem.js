@@ -812,6 +812,59 @@ export const FuelTypeFilterItems = [
 
 
 
+export const MileageFilterItems = [
+    {
+        label: '10,000'
+    },
+    {
+        label: '20,000'
+    },
+    {
+        label: '30,000'
+    },
+    {
+        label: '40,000'
+    },
+    {
+        label: '50,000'
+    },
+    {
+        label: '60,000'
+    },
+    {
+        label: '70,000'
+    },
+    {
+        label: '80,000'
+    },
+    {
+        label: '90,000'
+    },
+    {
+        label: '100,000'
+    },
+    {
+        label: '110,000'
+    },
+    {
+        label: '120,000'
+    },
+    {
+        label: '130,000'
+    },
+    {
+        label: '140,000'
+    },
+    {
+        label: '150,000'
+    },
+    {
+        label: '110,000'
+    },
+]
+
+
+
 export const DrivetrianFilterItems = [
     {
         label: 'دفع الرباعي'

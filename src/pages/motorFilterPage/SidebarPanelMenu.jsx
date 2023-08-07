@@ -18,8 +18,6 @@ const SidebarPanelMenu = ({filterType}) => {
       
 
       {filterType === 'NearestDistance' && 
-
-
         <div className=' flex flex-col gap-6 p-4'>
           <h1 className=' font-bold'>
             الترتيب حسب أقرب مسافة
@@ -51,21 +49,21 @@ const SidebarPanelMenu = ({filterType}) => {
 
       {filterType === 'DistanceShipping' && 
         <div>
-          Hello DistanceShipping
+           DistanceShipping
         </div>
       }
 
 
       {filterType === 'Make' && 
         <div>
-          Hello Make
+           Make
         </div>
       }
 
 
       {filterType === 'FuelType' && 
         <div>
-          Hello FuelType
+           FuelType
         </div>
       }
       
@@ -73,20 +71,20 @@ const SidebarPanelMenu = ({filterType}) => {
       
       {filterType === 'Year' && 
         <div>
-          Hello Year
+           Year
         </div>
       }
 
       {filterType === 'Mileage' && 
         <div>
-          Hello Mileage
+           Mileage
         </div>
       }
 
 
       {filterType === 'Features' && 
         <div>
-          Hello Features
+           Features
         </div>
       }
 
@@ -95,7 +93,7 @@ const SidebarPanelMenu = ({filterType}) => {
 
       {filterType === 'Drivetrian' && 
         <div>
-          Hello Drivetrian
+           Drivetrian
         </div>
       }
 
@@ -103,14 +101,14 @@ const SidebarPanelMenu = ({filterType}) => {
 
       {filterType === 'ExteriorColor' && 
         <div>
-          Hello ExteriorColor
+           ExteriorColor
         </div>
       }
 
 
       {filterType === 'InteriorColor' && 
         <div>
-          Hello InteriorColor
+           InteriorColor
         </div>
       }
 
@@ -119,20 +117,20 @@ const SidebarPanelMenu = ({filterType}) => {
 
       {filterType === 'Transmission' && 
         <div>
-          Hello Transmission
+           Transmission
         </div>
       }
 
       {filterType === 'Cylinders' && 
         <div>
-          Hello Cylinders
+           Cylinders
         </div>
       }
 
 
       {filterType === 'MPGHighway' && 
         <div>
-          Hello MPGHighway
+           MPGHighway
         </div>
       }
 
@@ -142,7 +140,7 @@ const SidebarPanelMenu = ({filterType}) => {
 
       {filterType === 'AdvancedSearch' && 
         <div>
-          Hello AdvancedSearch
+           AdvancedSearch
         </div>
       }
 

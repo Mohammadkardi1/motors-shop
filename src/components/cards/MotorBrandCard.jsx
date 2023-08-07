@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const MotorBrandCard = (item, index) => {
   return (
-    <Link to='/cars/car'  key={index} className='h-[220px] flex  items-end cursor-pointer'>
+    <Link to='/cars/moterFilter'  key={index} className='h-[220px] flex  items-end cursor-pointer'>
         <div className='relative w-[270px] hover:top-[-11px] transition-all duration-700'>
             <img src={item.img} alt={item.type} className='rounded-md  w-full' />
             <div className='absolute top-3 left-3'>

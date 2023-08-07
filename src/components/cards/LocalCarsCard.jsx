@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const LocalCarsCard = (item, index) => {
   return (
-    <Link to='/cars/car' key={index} >
+    <Link to='/cars/moterFilter' key={index} >
         <div className='relative w-[280px] shadow-lg border rounded-md overflow-hidden'>
             <img 
                 src={item.img} 

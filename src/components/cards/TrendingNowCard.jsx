@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const TrendingNowCard = (item, index, hoverdCard, setHoverdCard) => {
 
   return (
-    <Link to='/cars/car' key={index}>
+    <Link to='/cars/moterFilter' key={index}>
         <div className='relative h-[340px] w-[280px] shadow-lg border rounded-md overflow-hidden cursor-pointer'
                 onMouseEnter={() => setHoverdCard(index)}
                 onMouseLeave={() => setHoverdCard(null)}>

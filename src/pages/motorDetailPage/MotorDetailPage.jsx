@@ -7,6 +7,7 @@ import assistanceImg from '../../assets/images/AssistanceMessage.jpg'
 import Testimonial from '../../components/Testimonial';
 import { localCars } from '../../assets/data/DataItem';
 import LocalCarsCard from '../../components/cards/LocalCarsCard';
+import Gallery from '../../components/Gallery';
 
 
 
@@ -173,7 +174,8 @@ const MotorDetailPage = () => {
 
 
         <div className=' mt-6'>
-          <img src={assistanceImg} alt="assistance-img" className='w-full' />
+          {/* <img src={assistanceImg} alt="assistance-img" className='w-full' /> */}
+          <Gallery/>
         </div>
 
 

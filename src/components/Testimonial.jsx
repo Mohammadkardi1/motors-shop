@@ -2,7 +2,7 @@ import React from 'react'
 import {MdArrowForwardIos, MdArrowBackIos} from 'react-icons/md'
 
 
- 
+
 const Testimonial = ({ testimonials, 
             cardComponent, 
             testimonialID, 

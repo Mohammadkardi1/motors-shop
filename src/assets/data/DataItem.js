@@ -105,7 +105,7 @@ import Engine from '../images/gallery/Engine.webp'
 
 
 
-export const gallery = [
+export const galleryItems = [
     {
         imgURL: FrontPassenger,
         label: 'المقعد الأمامي الراكب'

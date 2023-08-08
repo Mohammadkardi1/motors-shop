@@ -17,53 +17,71 @@ const carPageNavbar = [
   {
     label: 'التاريخ والفحص'
   },
-  
+  {
+    label: 'الموصى به'
+  },
+]
+
+const overviewItems = [
+  {
+    type: 'معدل الأميال لكل غالون',
+    label: '22 في المدينة / 26 في الطرق السريعة'
+  },
+  {
+    type: 'المحرك',
+    label: '4 سلندر، بنزين، 2.5 لتر'
+  },
+  {
+    type: 'نوع الدفع',
+    label: 'دفع رباعي'
+  },
+  {
+    type: 'ناقل الحركة',
+    label: 'أوتوماتيك'
+  },
+  {
+    type: 'اللون',
+    label: 'أحمر / أسود'
+  },
 ]
 
 
+
+
+
+
+
+
 const MotorDetailPage = () => {
-
-
-
 
   const [activeSection, setActiveSection] = useState('')
 
 
 
-  
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('div.section')
       const carNavbarTop = document.querySelector('.carPageNavbar').offsetTop
-
       const carNavbarHeight = document.querySelector('.carPageNavbar').clientHeight
       
-      
-      let currentSection = '';
+      let currentSection = ''
 
-      sections.forEach((section, index) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (index === 0 ) {
-          console.log('carNavbarTop', carNavbarTop)
-          console.log('carNavbarHeight', carNavbarHeight)
-        }
-
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop
+        const sectionHeight = section.clientHeight
 
         if (carNavbarTop + carNavbarHeight >= sectionTop  && carNavbarTop + carNavbarHeight < sectionTop + sectionHeight) {
-          currentSection = section.id;
+          currentSection = section.id
         }
-      });
+      })
+      setActiveSection(currentSection)
+    }
 
-      setActiveSection(currentSection);
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
 
 
@@ -133,26 +151,26 @@ const MotorDetailPage = () => {
                   </a>
                 </h1>
               ))}
-
-
-
             </div>
-
           </Container>
         </div>
 
 
 
         <div id="section-0" className='section pt-[5rem] h-[600px]'>
-          <div > Section 0</div>
+          <div >نظرة عامة</div>
         </div>
 
         <div id="section-1" className='section pt-[5rem] h-[600px]'>
-          <div > Section 1</div>
+          <div >المميزات والمساحات</div>
         </div>
 
         <div id="section-2" className='section pt-[5rem] h-[600px]'>
-          <div > Section 2</div>
+          <div >التاريخ والفحص</div>
+        </div>
+
+        <div id="section-3" className='section pt-[5rem] h-[600px]'>
+          <div >الموصى به</div>
         </div>
 
 

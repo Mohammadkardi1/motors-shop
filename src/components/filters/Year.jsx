@@ -5,7 +5,7 @@ import {yearCategories} from '../../assets/data/DataItem'
 
 
 
-const Year = () => {
+const Year = ({filterLabel}) => {
 
     const [minYear, setMinYear] = useState(null)
     const [maxYear, setMaxYear] = useState(null)
@@ -14,7 +14,7 @@ const Year = () => {
   return (
     <div className=' flex flex-col gap-2 p-4'>
         <h1 className=' font-bold'>
-        السنة 
+            {filterLabel} 
         </h1>
         <div className='px-4'>
             <p className='mb-2'>من</p>

@@ -3,11 +3,11 @@ import {motorBrands} from '../../assets/data/DataItem'
 
 
 
-const Make = () => {
+const Make = ({filterLabel}) => {
   return (
     <div className=' flex flex-col gap-2 p-4'>
         <h1 className=' font-bold'>
-        الصنع
+            {filterLabel}
         </h1>
         {motorBrands.map((item, index) => (
             <div key={index} class="inline-flex items-center">

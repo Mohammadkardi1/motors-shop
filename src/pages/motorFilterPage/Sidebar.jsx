@@ -10,18 +10,20 @@ import SidebarPanelMenu from './SidebarPanelMenu.jsx'
 const Sidebar = () => {
 
   const [isOpen, setIsOpen] = useState(false)
-  const [filterType, setFilterType] = useState(null)
+  const [filterItem, setFilterItem] = useState({
+    type: null,
+    label: null
+  })
 
 
-  const filterItemHandler = (type) => {
+  const filterItemHandler = (type, label) => {
     setIsOpen(!isOpen)
-    setFilterType(type)
+    setFilterItem({type, label})
   }
 
 
   return (
     <div className='  sticky top-0  w-[320px] h-[100vh] border-e border-gray-300'>
-
 
       <div className='relative z-10 text-gray-600 shadow-md '>
         <div className='px-4 py-4 flex items-center gap-2 text-lg border-b border-gray-300 '>
@@ -49,7 +51,7 @@ const Sidebar = () => {
           {filterItems.map((item, index) => (
             <div 
               key={index} 
-              onClick={() => filterItemHandler(item.type)}
+              onClick={() => filterItemHandler(item.type, item.label)}
               className={`flex justify-between px-6 py-3 hover:text-lighBlue hover:bg-bgLightBlue  cursor-pointer
                   ${index !== filterItems.length - 1 ? 'border-b border-gray-300' : 'mb-12' }`}>
               <p>{item.label}</p>
@@ -72,11 +74,9 @@ const Sidebar = () => {
           </div>
 
 
-            <SidebarPanelMenu filterType={filterType}/>
+            <SidebarPanelMenu filterType={filterItem.type} filterLabel={filterItem.label}/>
 
         </div>
-        
-
       </div>
     </div>
   )

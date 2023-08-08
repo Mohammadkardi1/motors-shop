@@ -16,7 +16,7 @@ import AdvancedSearch from '../../components/filters/AdvancedSearch'
 
 
 
-const SidebarPanelMenu = ({filterType}) => {
+const SidebarPanelMenu = ({filterType, filterLabel}) => {
 
   const filterComponents = {
     NearestDistance: NearestDistance,
@@ -39,7 +39,7 @@ const SidebarPanelMenu = ({filterType}) => {
 
   return (
     <>
-      {FilterComponent && <FilterComponent />}
+      {FilterComponent && <FilterComponent filterLabel={filterLabel}/>}
     </>
   )
 }

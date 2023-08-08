@@ -678,7 +678,7 @@ export const filterItems = [
     },
     {
         type: 'Drivetrian',
-        label: 'نظام الدفع'
+        label: 'نوع الدفع'
     },
     {
         type: 'ExteriorColor',

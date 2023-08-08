@@ -1,10 +1,10 @@
 import React from 'react'
 
-const AdvancedSearch = () => {
+const AdvancedSearch = ({filterLabel}) => {
   return (
     <div className=' flex flex-col gap-2 p-4'>
         <h1 className=' font-bold'>
-            بحث متقدم   
+            {filterLabel}   
         </h1>
     </div>
   )

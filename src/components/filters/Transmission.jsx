@@ -3,11 +3,11 @@ import {TransmissionFilterItems} from '../../assets/data/DataItem'
 
 
 
-const Transmission = () => {
+const Transmission = ({filterLabel}) => {
   return (
     <div className=' flex flex-col gap-2 p-4'>
         <h1 className=' font-bold'>
-        ناقل الحركة
+            {filterLabel}
         </h1>
         {TransmissionFilterItems.map((item, index) => (
             <div key={index} class="inline-flex items-center">

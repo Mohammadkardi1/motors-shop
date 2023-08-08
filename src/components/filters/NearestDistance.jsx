@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {NearestDistanceFilterItems} from '../../assets/data/DataItem'
 
 
-const NearestDistance = () => {
+const NearestDistance = ({filterLabel}) => {
 
 const [nearestDistanceFilter, setNearestDistanceFilter] = useState(null)
 
@@ -10,7 +10,7 @@ const [nearestDistanceFilter, setNearestDistanceFilter] = useState(null)
   return (
     <div className=' flex flex-col gap-2 p-4'>
         <h1 className=' font-bold'>
-        الترتيب حسب أقرب مسافة
+            {filterLabel}
         </h1>
         {NearestDistanceFilterItems.map((item, index) => (
             <div key={index} className='flex gap-2 cursor-pointer'

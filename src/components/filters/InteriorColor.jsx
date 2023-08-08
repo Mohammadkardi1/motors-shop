@@ -3,11 +3,11 @@ import {InteriorColorFilterItems} from '../../assets/data/DataItem'
 
 
 
-const InteriorColor = () => {
+const InteriorColor = ({filterLabel}) => {
   return (
     <div className=' flex flex-col gap-2 p-4'>
         <h1 className=' font-bold'>
-        اللون الداخلي
+            {filterLabel}
         </h1>
         {InteriorColorFilterItems.map((item, index) => (
             <div key={index} class="inline-flex items-center">

@@ -4,11 +4,11 @@ import {DrivetrianFilterItems} from '../../assets/data/DataItem'
 
 
 
-const Drivetrian = () => {
+const Drivetrian = ({filterLabel}) => {
   return (
     <div className=' flex flex-col gap-2 p-4'>
         <h1 className=' font-bold'>
-        نظام الدفع
+            {filterLabel}
         </h1>
         {DrivetrianFilterItems.map((item, index) => (
             <div key={index} class="inline-flex items-center">

@@ -3,11 +3,12 @@ import {motorTypes} from '../../assets/data/DataItem'
 
 
 
-const BodyType = () => {
+const BodyType = ({filterLabel}) => {
+
   return (
     <div className=' flex flex-col gap-2 p-4'>
         <h1 className=' font-bold'>
-        نوع الهيكل
+            {filterLabel}
         </h1>
         {motorTypes.map((item, index) => (
             <div key={index} class="inline-flex items-center">

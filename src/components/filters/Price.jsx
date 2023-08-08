@@ -5,7 +5,7 @@ import {AiOutlineDown} from 'react-icons/ai'
 
 
 
-const Price = () => {
+const Price = ({filterLabel}) => {
 
     const [priceRange, setPriceRange] = useState({minPrice: null, maxPrice: null});
     const [minPriceIndex, setMinPriceIndex] = useState(0);
@@ -23,7 +23,7 @@ const Price = () => {
   return (
     <div className=' flex flex-col gap-6 p-4'>
         <h1 className=' font-bold'>
-        السعر  
+            {filterLabel}  
         </h1>
         <div className='px-4'>
             <div className={`relative w-full py-2 border border-brandBlue rounded-sm shadow-lg

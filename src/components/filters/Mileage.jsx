@@ -4,7 +4,7 @@ import {AiOutlineDown} from 'react-icons/ai'
 
 
 
-const Mileage = () => {
+const Mileage = ({filterLabel}) => {
 
     const [mileage, setMileage] = useState(null)
 
@@ -12,7 +12,7 @@ const Mileage = () => {
   return (
     <div className=' flex flex-col gap-2 p-4'>
         <h1 className=' font-bold'>
-        عدد الأميال 
+            {filterLabel}  
         </h1>
         <div className='px-4'>
             <p className='mb-2'>من</p>

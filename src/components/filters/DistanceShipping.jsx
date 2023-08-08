@@ -5,7 +5,7 @@ import {AiOutlineDown} from 'react-icons/ai'
 
 
 
-const DistanceShipping = () => {
+const DistanceShipping = ({filterLabel}) => {
 
     const [shipByDistance, setShipByDistance] = useState(null)
     const [maxShippingFee, setMaxShippingFee] = useState(null)
@@ -21,7 +21,7 @@ const DistanceShipping = () => {
     
     <div className=' flex flex-col gap-6 py-4'>
         <h1 className=' font-bold px-4'>
-            المسافة & الشحن 
+            {filterLabel}
         </h1>
         <div className='px-4'>
             <p className='mb-2'>التسوق حسب المسافة</p>

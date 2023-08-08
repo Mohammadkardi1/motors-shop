@@ -2,11 +2,11 @@ import React from 'react'
 import {ExteriorColorFilterItems} from '../../assets/data/DataItem'
 
 
-const ExteriorColor = () => {
+const ExteriorColor = ({filterLabel}) => {
   return (
     <div className=' flex flex-col gap-2 p-4'>
         <h1 className=' font-bold'>
-        اللون الخارجي
+            {filterLabel}
         </h1>
         {ExteriorColorFilterItems.map((item, index) => (
             <div key={index} class="inline-flex items-center">

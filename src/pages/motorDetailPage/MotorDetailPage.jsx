@@ -201,7 +201,6 @@ const MotorDetailPage = () => {
             <h1 className='text-[2rem] text-bold text-brandBlue font-bold mb-4'>
               {carPageNavbar[0].label}
             </h1>
-
             <div className="grid grid-cols-4 gap-4">
               {overviewItems.map((item, index) => (
                 <div key={index}>
@@ -211,8 +210,6 @@ const MotorDetailPage = () => {
               ))}
             </div>
           </div>
-
-
 
 
           <div id={`${carPageNavbar[1].label}`} className='section pt-[5rem]'>
@@ -227,7 +224,6 @@ const MotorDetailPage = () => {
                 </div>
               ))}
             </div>
-
           </div>
 
 
@@ -236,14 +232,13 @@ const MotorDetailPage = () => {
             <h1 className='text-[2rem] text-bold text-brandBlue font-bold mb-4'>
               {carPageNavbar[2].label}
             </h1>
-
             <Testimonial
-            testimonials={localCars} 
-            cardComponent={LocalCarsCard} 
-            testimonialID={'recommanded-car-carousel'} 
-            useShadow={false}
-            buttonPadding={' py-12'}
-            testimonialPadding={' '}/>
+              testimonials={localCars} 
+              cardComponent={LocalCarsCard} 
+              testimonialID={'recommanded-car-carousel'} 
+              useShadow={false}
+              buttonPadding={' py-12'}
+              testimonialPadding={' '}/>
           </div>
 
 
@@ -253,12 +248,6 @@ const MotorDetailPage = () => {
             </h1>
           </div> */}
         </Container>
-
-
-
-
-
-
     </div>
   )
 }

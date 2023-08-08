@@ -79,6 +79,122 @@ import Ranking from '../images/trending-now/Ranking.webp'
 import Sedans from '../images/trending-now/Sedans.webp'
 
 
+// Gallery 
+import FrontPassenger from '../images/gallery/FrontPassenger.jpg'
+import Front from '../images/gallery/Front.webp'
+import FrontDriver from '../images/gallery/FrontDriver.webp'
+import DriverProfile from '../images/gallery/DriverProfile.webp'
+import RearDriver from '../images/gallery/RearDriver.webp'
+import Rear from '../images/gallery/Rear.webp'
+import RearPassenger from '../images/gallery/RearPassenger.webp'
+import PassengerProfile from '../images/gallery/PassengerProfile.webp'
+import Dashboard from '../images/gallery/Dashboard.webp'
+import FrontDriverCompartment from '../images/gallery/FrontDriverCompartment.webp'
+import SteeringWheelInstrumentCluster from '../images/gallery/SteeringWheelInstrumentCluster.webp'
+import Keys from '../images/gallery/Keys.webp'
+import TrunkCargo from '../images/gallery/TrunkCargo.webp'
+import Sunroof from '../images/gallery/Sunroof.webp'
+import Radio from '../images/gallery/Radio.webp'
+import Shifter from '../images/gallery/Shifter.webp'
+import ClimateControls from '../images/gallery/ClimateControls.webp'
+import DriverAccessoryControls from '../images/gallery/DriverAccessoryControls.webp'
+import DriverDoorPanel from '../images/gallery/DriverDoorPanel.webp'
+import USBAUXPorts from '../images/gallery/USBAUXPorts.webp'
+import Engine from '../images/gallery/Engine.webp'
+
+
+
+
+export const gallery = [
+    {
+        imgURL: FrontPassenger,
+        label: 'المقعد الأمامي الراكب'
+    },
+    {
+        imgURL: Front,
+        label: 'الجهة الأمامية'
+    },
+    {
+        imgURL: FrontDriver,
+        label: 'المقعد الأمامي السائق'
+    },
+    {
+        imgURL: DriverProfile,
+        label: 'ملف تعريف السائق'
+    },
+    {
+        imgURL: RearDriver,
+        label: 'الجهة الخلفية السائق'
+    },
+    {
+        imgURL: Rear,
+        label: 'الجهة الخلفية'
+    },
+    {
+        imgURL: RearPassenger,
+        label: 'المقعد الخلفي الراكب'
+    },
+    {
+        imgURL: PassengerProfile,
+        label: 'ملف تعريف الراكب الأمامي'
+    },
+    {
+        imgURL: Dashboard,
+        label: 'لوحة القيادة'
+    },
+    {
+        imgURL: FrontDriverCompartment,
+        label: 'مقصورة السائق الأمامية'
+    },
+    {
+        imgURL: SteeringWheelInstrumentCluster,
+        label: 'عجلة القيادة وعداد السرعة'
+    },
+    {
+        imgURL: Keys,
+        label: 'المفاتيح'
+    },
+    {
+        imgURL: TrunkCargo,
+        label: 'صندوق الأمتعة والشحن'
+    },
+    {
+        imgURL: Sunroof,
+        label: 'فتحة سقف'
+    },
+    {
+        imgURL: Radio,
+        label: 'الراديو'
+    },
+    {
+        imgURL: Shifter,
+        label: 'محول السرعة'
+    },
+    {
+        imgURL: ClimateControls,
+        label: 'أجهزة التحكم في المناخ'
+    },
+    {
+        imgURL: DriverAccessoryControls,
+        label: 'أجهزة التحكم في الملحقات السائق'
+    },
+    {
+        imgURL: DriverDoorPanel,
+        label: 'لوحة باب السائق'
+    },
+    {
+        imgURL: USBAUXPorts,
+        label: 'منافذ USB/AUX'
+    },
+    {
+        imgURL: Engine,
+        label: 'المحرك'
+    }
+]
+
+
+
+
 export const motorTypes = [
     // {
     //     label: 'رياضية متعددة الاستخدامات',
@@ -933,3 +1049,6 @@ export const TransmissionFilterItems = [
         label: 'اوتوماتيك'
     },
 ]
+
+
+

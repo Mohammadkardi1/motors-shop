@@ -10,7 +10,7 @@ const LocalCarsCard = (item, index) => {
             <img 
                 src={item.img} 
                 alt={item.alt} 
-                className=' h-[200px] object-cover w-full' />
+                className='h-[200px] object-cover w-full' />
             <div className='absolute top-3 left-3 '>
                 <div className="relative transition cursor-pointer">
                     <AiOutlineHeart

@@ -35,51 +35,26 @@ const Gallery = () => {
             </button>
         </div>
         <div id={'gallery'} className="testimonial flex gap-1 items-center justify-start scroll-smooth overflow-x-auto">
-                <div className=' grid grid-rows-2'>
+            <div className='h-[330px] flex '>
+                <div class="w-[620px] me-1 h-full p-1">
+                    <img 
+                        src={galleryItems[0].imgURL} 
+                        alt="assistance-img" 
+                        className='h-full w-full rounded-md object-cover object-center' />
 
-
-                    <div class="  row-span-2">
-                        <img 
-                            src={assistanceImg} 
-                            alt="assistance-img" 
-                            className='h-full w-full rounded-md object-cover object-center' />
-
-                    </div>
-
-                    <div class="">
-                        <img
-                            alt="assistance-img"
-                            class="block h-full w-full  rounded-md object-cover object-center"
-                            src={assistanceImg} />
-                    </div>
-
-
-                {/* <div class="flex flex-col flex-wrap w-1/4 h-full">
-
+                </div>
+                <div class="flex flex-col flex-wrap  w-[310px] ">
                     {galleryItems.map((item, index) => (
-                        <div class=" w-full">
+                        index !== 0 &&
+                        <div key={index} class=" w-full h-1/2 p-1">
                             <img
                                 alt="assistance-img"
                                 class="block h-full w-full  rounded-md object-cover object-center"
-                                src={assistanceImg} />
+                                src={item.imgURL} />
                         </div>
                     ))}
-                </div> */}
-
-
                 </div>
-
-
-
-                
-            {/* {galleryItems.map((item, index) => (
-                // <div className="relative w-[280px] shadow-lg border rounded-md overflow-hidden">
-                    <img 
-                        src={assistanceImg} 
-                        alt="assistance-img" 
-                        className='w-[280px] h-[200px] object-cover' />
-                // </div>
-            ))} */}
+            </div>
         </div>
     </div>
   )

@@ -4,6 +4,9 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import assistanceImg from '../../assets/images/AssistanceMessage.jpg'
+import Testimonial from '../../components/Testimonial';
+import { localCars } from '../../assets/data/DataItem';
+import LocalCarsCard from '../../components/cards/LocalCarsCard';
 
 
 
@@ -14,9 +17,9 @@ const carPageNavbar = [
   {
     label: 'المميزات والمساحات'
   },
-  {
-    label: 'التاريخ والفحص'
-  },
+  // {
+  //   label: 'التاريخ والفحص'
+  // },
   {
     label: 'الموصى به'
   },
@@ -44,6 +47,45 @@ const overviewItems = [
     label: 'أحمر / أسود'
   },
 ]
+
+const featureItems = [
+  {
+    label: 'نظام الدفع الرباعي/نظام الدفع الكلي'
+  },
+  {
+    label: 'مقاعد قماشية'
+  },
+  {
+    label: 'صوت سيدي'
+  },
+  {
+    label: 'مزيل الضباب الخلفي'
+  },
+  {
+    label: 'راديو AM/FM'
+  },
+  {
+    label: 'جناح خلفي'
+  },
+  {
+    label: 'مثبت السرعة'
+  },
+  {
+    label: 'مدخل صوتي إضافي'
+  },
+  {
+    label: 'تكييف الهواء'
+  },
+  {
+    label: 'مرايا كهربائية'
+  },
+]
+
+
+
+
+
+
 
 
 
@@ -96,14 +138,14 @@ const MotorDetailPage = () => {
               <p>رجوع</p>
             </Link>
             &bull;
-            <a href="#" className='p-2 hover:bg-bgLightBlue'>
+            <a href={`#${carPageNavbar[2].label}`} className='p-2 hover:bg-bgLightBlue'>
               الموصى به
             </a>
           </div>
         
 
           <div className='flex justify-between items-center '>
-            <div className=' text-brandBlue'>
+            <div className=''>
               <h1 className='text-[2.5rem] text-bold text-brandBlue font-bold mb-2'>
                   هونداي 2011
               </h1>
@@ -137,15 +179,13 @@ const MotorDetailPage = () => {
 
 
         <div className='carPageNavbar mt-2 shadow-lg bg-white sticky top-0 z-10'>
-
           <Container>
             <div className=' flex items-center'>
-
               {carPageNavbar.map((item, index) => (
                 <h1 key={index} 
                   className={`px-4 py-2 border-b-[4px] border-white hover:border-lighBlue 
-                    ${activeSection === `section-${index}` ? 'border-lighBlue' : 'border-white' }`}>
-                  <a href={`#section-${index}`}
+                    ${activeSection === item.label ? 'border-lighBlue' : 'border-white' }`}>
+                  <a href={`#${item.label}`}
                     className='px-3 py-4 block hover:bg-bgLightBlue cursor-pointer'>
                     {item.label}
                   </a>
@@ -156,22 +196,63 @@ const MotorDetailPage = () => {
         </div>
 
 
+        <Container>
+          <div id={`${carPageNavbar[0].label}`} className='section pt-[5rem]'>
+            <h1 className='text-[2rem] text-bold text-brandBlue font-bold mb-4'>
+              {carPageNavbar[0].label}
+            </h1>
 
-        <div id="section-0" className='section pt-[5rem] h-[600px]'>
-          <div >نظرة عامة</div>
-        </div>
+            <div className="grid grid-cols-4 gap-4">
+              {overviewItems.map((item, index) => (
+                <div key={index}>
+                  <p className='font-[700] text-brandBlue'>{item.type}</p>
+                  <p className=' text-neutral-500 font-[400]'>{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        <div id="section-1" className='section pt-[5rem] h-[600px]'>
-          <div >المميزات والمساحات</div>
-        </div>
 
-        <div id="section-2" className='section pt-[5rem] h-[600px]'>
-          <div >التاريخ والفحص</div>
-        </div>
 
-        <div id="section-3" className='section pt-[5rem] h-[600px]'>
-          <div >الموصى به</div>
-        </div>
+
+          <div id={`${carPageNavbar[1].label}`} className='section pt-[5rem]'>
+            <h1 className='text-[2rem] text-bold text-brandBlue font-bold mb-4'>
+              {carPageNavbar[1].label}
+            </h1>
+
+            <div className="grid grid-cols-2 gap-4">
+              {featureItems.map((item, index) => (
+                <div key={index}>
+                  <p className='text-neutral-500 font-[500]'>{item.label}</p>
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+
+
+          <div id={`${carPageNavbar[2].label}`} className='section pt-[5rem] mb-10'>
+            <h1 className='text-[2rem] text-bold text-brandBlue font-bold mb-4'>
+              {carPageNavbar[2].label}
+            </h1>
+
+            <Testimonial
+            testimonials={localCars} 
+            cardComponent={LocalCarsCard} 
+            testimonialID={'recommanded-car-carousel'} 
+            useShadow={false}
+            buttonPadding={' py-12'}
+            testimonialPadding={' '}/>
+          </div>
+
+
+          {/* <div id="section-3" className='section pt-[5rem] h-[600px]'>
+            <h1 className='text-[2rem] text-bold text-brandBlue font-bold mb-4'>
+              {carPageNavbar[3].label}
+            </h1>
+          </div> */}
+        </Container>
 
 
 

@@ -89,15 +89,18 @@ const featureItems = [
 
 
 
-
-
-
-
-
-
 const MotorDetailPage = () => {
 
   const [activeSection, setActiveSection] = useState('')
+
+
+  console.log("activeSection", activeSection)
+
+  carPageNavbar.map(item => {
+    if (item.label === activeSection) {
+      console.log('is equal', item.label)
+    }
+  })
 
 
 
@@ -185,8 +188,8 @@ const MotorDetailPage = () => {
             <div className=' flex items-center'>
               {carPageNavbar.map((item, index) => (
                 <h1 key={index} 
-                  className={`px-4 py-2 border-b-[4px] border-white hover:border-lighBlue 
-                    ${activeSection === item.label ? 'border-lighBlue' : 'border-white' }`}>
+                  className={`px-4 py-2 border-b-[4px] hover:border-lighBlue 
+                    ${item.label === activeSection ? 'border-lighBlue ' : 'border-white' }`}>
                   <a href={`#${item.label}`}
                     className='px-3 py-4 block hover:bg-bgLightBlue cursor-pointer'>
                     {item.label}

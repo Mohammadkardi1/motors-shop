@@ -8,6 +8,7 @@ import Testimonial from '../../components/Testimonial';
 import { localCars } from '../../assets/data/DataItem';
 import LocalCarsCard from '../../components/cards/LocalCarsCard';
 import Gallery from '../../components/Gallery';
+import GalleryOverlay from '../../components/GalleryOverlay ';
 
 
 
@@ -86,12 +87,10 @@ const featureItems = [
 
 
 
-
-
-
 const MotorDetailPage = () => {
 
   const [activeSection, setActiveSection] = useState('')
+  const [openGalleryOverlay, setOpenGalleryOverlay] = useState(false)
 
 
   console.log("activeSection", activeSection)
@@ -130,7 +129,9 @@ const MotorDetailPage = () => {
   }, [])
 
 
-
+  if (openGalleryOverlay) {
+    return <GalleryOverlay setOpenGalleryOverlay={setOpenGalleryOverlay}/>
+}
 
   return (
     <div className='mt-6'>
@@ -178,7 +179,7 @@ const MotorDetailPage = () => {
 
         <div className=' mt-6'>
           {/* <img src={assistanceImg} alt="assistance-img" className='w-full' /> */}
-          <Gallery/>
+          <Gallery setOpenGalleryOverlay={setOpenGalleryOverlay}/>
         </div>
 
 

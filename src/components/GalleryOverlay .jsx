@@ -4,13 +4,12 @@ import {galleryItems} from '../assets/data/DataItem'
 import {AiOutlineClose} from 'react-icons/ai'
 
 
-const GalleryOverlay  = ({setOpenGalleryOverlay}) => {
+const GalleryOverlay  = ({mainImgIndex, setMainImgIndex, setOpenGalleryOverlay}) => {
 
-  const [mainImgIndex, setMainImgIndex] = useState(0)
 
 
   return (
-    <div className='fixed flex w-[100%] h-[100vh] top-0  left-0   bg-black z-40 overflow-hidden'>
+    <div className='fixed flex w-[100%] h-[100vh] top-0  left-0   bg-[#1c2733] z-40 overflow-hidden'>
 
 
 

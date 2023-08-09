@@ -6,7 +6,7 @@ import { useState } from 'react'
 import GalleryOverlay from './GalleryOverlay '
 
 
-const Gallery = ({setOpenGalleryOverlay}) => {
+const Gallery = ({setMainImgIndex, setOpenGalleryOverlay}) => {
 
 
 
@@ -17,6 +17,12 @@ const Gallery = ({setOpenGalleryOverlay}) => {
     const scrollleft = () => {
     document.getElementById('gallery').scrollLeft -= 200
     }
+
+    const imgClickHandler = (index) => {
+      setOpenGalleryOverlay(true)
+      setMainImgIndex(index)
+    }
+
 
 
 //   if (openGalleryOverlay) {
@@ -52,7 +58,7 @@ const Gallery = ({setOpenGalleryOverlay}) => {
                         src={galleryItems[0].imgURL} 
                         alt="assistance-img" 
                         className='h-full w-full rounded-md object-cover object-center cursor-pointer'
-                        onClick={() => setOpenGalleryOverlay(true)} />
+                        onClick={() => imgClickHandler(0)} />
 
                 </div>
                 <div class="flex flex-col flex-wrap  w-[310px] ">
@@ -63,7 +69,7 @@ const Gallery = ({setOpenGalleryOverlay}) => {
                                 alt="error"
                                 class="block h-full w-full  rounded-md object-cover object-center cursor-pointer"
                                 src={item.imgURL}
-                                onClick={() => setOpenGalleryOverlay(true)} />
+                                onClick={() => imgClickHandler(index)} />
                         </div>
                     ))}
                 </div>

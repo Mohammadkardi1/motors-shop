@@ -90,7 +90,6 @@ const featureItems = [
 const MotorDetailPage = () => {
 
   const [activeSection, setActiveSection] = useState('')
-  const [openGalleryOverlay, setOpenGalleryOverlay] = useState(false)
 
 
   console.log("activeSection", activeSection)
@@ -129,9 +128,9 @@ const MotorDetailPage = () => {
   }, [])
 
 
-  if (openGalleryOverlay) {
-    return <GalleryOverlay setOpenGalleryOverlay={setOpenGalleryOverlay}/>
-}
+//   if (openGalleryOverlay) {
+//     return <GalleryOverlay setOpenGalleryOverlay={setOpenGalleryOverlay}/>
+// }
 
   return (
     <div className='mt-6'>
@@ -179,7 +178,7 @@ const MotorDetailPage = () => {
 
         <div className=' mt-6'>
           {/* <img src={assistanceImg} alt="assistance-img" className='w-full' /> */}
-          <Gallery setOpenGalleryOverlay={setOpenGalleryOverlay}/>
+          <Gallery />
         </div>
 
 

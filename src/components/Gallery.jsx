@@ -6,9 +6,8 @@ import { useState } from 'react'
 import GalleryOverlay from './GalleryOverlay '
 
 
-const Gallery = () => {
+const Gallery = ({setOpenGalleryOverlay}) => {
 
-    const [openGalleryOverlay, setOpenGalleryOverlay] = useState(false)
 
 
     const scrollright = () => {
@@ -20,9 +19,9 @@ const Gallery = () => {
     }
 
 
-  if (openGalleryOverlay) {
-    return <GalleryOverlay setOpenGalleryOverlay={setOpenGalleryOverlay}/>
-}
+//   if (openGalleryOverlay) {
+//     return <GalleryOverlay setOpenGalleryOverlay={setOpenGalleryOverlay}/>
+// }
 
 
   return (
@@ -61,7 +60,7 @@ const Gallery = () => {
                         index !== 0 &&
                         <div key={index} class=" w-full h-1/2 p-1">
                             <img
-                                alt="assistance-img"
+                                alt="error"
                                 class="block h-full w-full  rounded-md object-cover object-center cursor-pointer"
                                 src={item.imgURL}
                                 onClick={() => setOpenGalleryOverlay(true)} />

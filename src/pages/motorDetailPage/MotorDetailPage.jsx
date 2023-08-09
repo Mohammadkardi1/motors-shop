@@ -90,10 +90,11 @@ const featureItems = [
 const MotorDetailPage = () => {
 
   const [activeSection, setActiveSection] = useState('')
+  const [openGalleryOverlay, setOpenGalleryOverlay] = useState(false)
 
 
-  console.log("activeSection", activeSection)
 
+  
   carPageNavbar.map(item => {
     if (item.label === activeSection) {
       console.log('is equal', item.label)
@@ -105,20 +106,23 @@ const MotorDetailPage = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('div.section')
-      const carNavbarTop = document.querySelector('.carPageNavbar').offsetTop
-      const carNavbarHeight = document.querySelector('.carPageNavbar').clientHeight
-      
+      const carNavbar = document.querySelector('.carPageNavbar');
       let currentSection = ''
 
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop
-        const sectionHeight = section.clientHeight
+      if (carNavbar && sections) {
+        const carNavbarTop = carNavbar.offsetTop
+        const carNavbarHeight = carNavbar.clientHeight
 
-        if (carNavbarTop + carNavbarHeight >= sectionTop  && carNavbarTop + carNavbarHeight < sectionTop + sectionHeight) {
-          currentSection = section.id
-        }
-      })
-      setActiveSection(currentSection)
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop
+          const sectionHeight = section.clientHeight
+
+          if (carNavbarTop + carNavbarHeight >= sectionTop  && carNavbarTop + carNavbarHeight < sectionTop + sectionHeight) {
+            currentSection = section.id
+          }
+        })
+        setActiveSection(currentSection)
+    }
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -128,9 +132,9 @@ const MotorDetailPage = () => {
   }, [])
 
 
-//   if (openGalleryOverlay) {
-//     return <GalleryOverlay setOpenGalleryOverlay={setOpenGalleryOverlay}/>
-// }
+  if (openGalleryOverlay) {
+    return <GalleryOverlay setOpenGalleryOverlay={setOpenGalleryOverlay}/>
+  }
 
   return (
     <div className='mt-6'>
@@ -178,7 +182,7 @@ const MotorDetailPage = () => {
 
         <div className=' mt-6'>
           {/* <img src={assistanceImg} alt="assistance-img" className='w-full' /> */}
-          <Gallery />
+          <Gallery setOpenGalleryOverlay={setOpenGalleryOverlay}/>
         </div>
 
 
